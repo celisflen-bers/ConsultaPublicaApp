@@ -1,31 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Consulta Pública 1.0</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
-<div data-role="page">
-  <div data-role="header">
-    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
-    <h1>Consulta Pública 1.0</h1>
+<!--HOME-->
+<div data-role="page" id="home">
+
+<!--header-->
+  <div data-role="header" data-position="fixed">
+      <h1>Consulta Pública 1.0</h1>
+	    <a href="#options" data-icon="gear" class="ui-btn-right" data-iconpos="notext">Opciones</a>
   </div>
 
-   <div data-role="main" class="ui-content">
+  <div data-role="main" class="ui-content">
     <div data-role="controlgroup" data-type="horizontal">
-  <a href="#" class="ui-btn">CSV</a>
-  <a href="#" class="ui-btn">CNE</a>
-  <a href="#" class="ui-btn">IVSS</a>
+      <a href="#csv" class="ui-btn">CSV</a>
+      <a href="#" class="ui-btn">CNE</a>
+      <a href="#" class="ui-btn">IVSS</a>
     </div>
   </div>
 
-  <div data-role="footer">
-    <h1>Copyleft. <a href="https://github.com/carloscelis">Carlos Celis Flen-Bers</a></h1>
+<!--footer-->
+  <div data-role="footer" data-position="fixed" class="ui-state-persist">
+    <h1>Copyleft. <a href="https://github.com/carloscelis/ConsultaPublicaApp">Celis Flen-Bers</a></h1>
   </div>
 </div>
+
+
+
+<!------------------Pages-->
+
+
+<!--CSV-->
+<div data-role="page" id='csv'>
+
+<!--header-->
+  <div data-role="header" data-position="fixed">
+   	<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
+    <h1>CSV</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Consulta Pública maneja CSV del tipo <b>nacionalidad; cedula; primer_apellido, segundo_apellido, primer_nombre, segundo_nombre; fecha_nacimiento</b></p>
+    <p><a href="#crearCSV">Crear CSV</p>
+    <p><a href="#modCSV">Modificar CSV</a></p>
+  </div>
+
+<!--footer-->
+  <div data-role="footer" data-position="fixed" class="ui-state-persist">
+    <h1>Copyleft. <a href="https://github.com/carloscelis/ConsultaPublicaApp">Celis Flen-Bers</a></h1>
+  </div>
+
+</div>
+
+  <!--crear CSV-->
+  <div data-role="page" id='crearCSV'>
+
+  <!--header-->
+    <div data-role="header" data-position="fixed">
+     	<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
+      <h1>Crear CSV</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <p>Crear CSV</p>
+    </div>
+
+  <!--footer-->
+    <div data-role="footer" data-position="fixed" class="ui-state-persist">
+      <h1>Copyleft. <a href="https://github.com/carloscelis/ConsultaPublicaApp">Celis Flen-Bers</a></h1>
+    </div>
+
+  </div>
+
+  <!--modif CSV-->
+  <div data-role="page" id='crearCSV'>
+
+  <!--header-->
+    <div data-role="header" data-position="fixed">
+     	<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
+      <h1>Crear CSV</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <p>Crear CSV</p>
+    </div>
+
+  <!--footer-->
+    <div data-role="footer" data-position="fixed" class="ui-state-persist">
+      <h1>Copyleft. <a href="https://github.com/carloscelis/ConsultaPublicaApp">Celis Flen-Bers</a></h1>
+    </div>
+
+  </div>
+
+<!--Opc-->
+<div data-role="page" id='options'>
+
+<!--header-->
+  <div data-role="header" data-position="fixed">
+   	<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
+    <h1>Opciones</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Opciones</p>
+  </div>
+  
+<!--footer-->
+  <div data-role="footer" data-position="fixed" class="ui-state-persist">
+    <h1>Copyleft. <a href="https://github.com/carloscelis/ConsultaPublicaApp">Celis Flen-Bers</a></h1>
+  </div>
+
+</div>
+
 
 </body>
 </html>
