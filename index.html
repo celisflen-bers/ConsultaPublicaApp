@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Consulta Pública 1.0</title> 
+  <meta name="author" content="http://celisflenbers.wordpress.com/" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="http://view.jqueryui.com/master/ui/datepicker.js"></script>
+
+	<!-- jQuery Mobile Datepicker -->
+	<link href="http://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.css" rel="stylesheet">
+	<script src="http://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.js"></script>
 </head>
 <body>
 
@@ -69,10 +78,45 @@
     <div data-role="header" data-position="fixed">
      	<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
       <h1>Crear CSV</h1>
+	    <a href="#options" data-icon="back" data-rel="back" class="ui-btn-right" data-iconpos="notext">Atrás</a>
     </div>
 
     <div data-role="main" class="ui-content">
-      <p>Crear CSV</p>
+      <h2>Crear CSV</h2>
+      <p>Ingrese los registros</p>
+      <form>
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+
+        	<input type="radio" name="nac" id="nac1" value="V" checked="checked" />
+        	<label for="nac1">V</label>
+
+	        <input type="radio" name="nac" id="nac2" value="E"  />
+        	<label for="nac2">E</label>
+            	
+        </fieldset>
+
+        <label for="cedula">Cédula:</label>
+        <input type="number" name="cedula" id="cedula" data-mini="true" placeholder="Cédula" />
+
+        <label for="p_nombre">Primer nombre:</label>
+        <input type="text" name="p_nombre" id="p_nombre" data-mini="true" placeholder="Primer Nombre" />
+        <label for="p_nombre">Segundo nombre:</label>
+        <input type="text" name="p_nombre" id="p_nombre" data-mini="true" placeholder="Segundo Nombre" />
+        <label for="p_apellido">Primer apellido:</label>
+        <input type="text" name="p_apellido" id="p_apellido" data-mini="true" placeholder="Primer Apellido" />
+        <label for="p_apellido">Segundo apellido:</label>
+        <input type="text" name="p_apellido" id="p_apellido" data-mini="true" placeholder="Segundo Apellido" />
+        
+        <label for="fecha_nac">Fecha de nacimiento:</label>
+        <input type="text" id="date" placeholder="Change me!" data-role="date" data-date-format="yy-mm-dd"/>
+        
+        <a href="#" data-role="button" data-icon="plus" data-iconpos="notext">Más</a>
+
+        <table id="csv_data">
+        </table>
+
+        <input type="submit" value="Guardar">
+      </form>
     </div>
 
   <!--footer-->
@@ -90,6 +134,7 @@
     <div data-role="header" data-position="fixed">
      	<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
       <h1>Modificar CSV</h1>
+	    <a href="#options" data-icon="back" data-rel="back" class="ui-btn-right" data-iconpos="notext">Atrás</a>
     </div>
 
     <div data-role="main" class="ui-content">
